@@ -1,4 +1,4 @@
-import useFetch from "../hooks/useFetch";
+import useFetch from "../utils/hooks/useFetch";
 
 const Discover = ({ theDate }) => {
  
