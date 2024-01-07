@@ -1,0 +1,21 @@
+.custom-carousel .carousel-control-prev {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-carousel .carousel-control-next {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carouselContainer{ 
+  width: 20rem;
+  min-height: 30rem; 
+  /* overflow: hidden;  */
+}
+.carouselImg{
+  width: 100%;
+  height: auto;
+}
