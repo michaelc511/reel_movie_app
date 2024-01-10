@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-import './/HomeCarousel.css'
+import './HomeCarousel.css'
 export default function HomeCarousel({ data }){
 
   const getImageUrl = (posterPath) => {
@@ -21,7 +21,7 @@ export default function HomeCarousel({ data }){
                 src={getImageUrl(movie.poster_path)}
                  />
               <Carousel.Caption>
-                <h2>{movie.original_title}</h2>
+                <h2>{movie.original_title}</h2>z
               </Carousel.Caption>
             </Carousel.Item>
           )
