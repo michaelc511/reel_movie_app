@@ -11,8 +11,8 @@ export default function HomeCarousel({ data }){
     <div className="carouselContainer">
       <Carousel className="custom-carousel">
 
-        {/* here I actually only want to iterate a few times so I will replace 'map' with a 'for loop'. */}
-        {data ? data.results.map((movie) => {
+        {/* here I actually only want 3 items and using slice can just get what I want */}
+        {data ? data.results.slice(0,3).map((movie) => {
 
           return(
             <Carousel.Item key={movie.id}>
