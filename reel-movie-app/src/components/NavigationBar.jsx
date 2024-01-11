@@ -7,9 +7,9 @@ import "./NavigationBars.css"
 export default function NavigationBar(){
 
   return(
-    <Navbar sticky="top">
+    <Navbar sticky="top" expand="lg">
       <Container>
-        <Nav >
+        <Nav className="navbar justify-content-center bg-body-tertiary">
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#discover">Discover</Nav.Link>
           <Nav.Link href="#topRated">TopRated</Nav.Link>

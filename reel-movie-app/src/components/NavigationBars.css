@@ -1,0 +1,6 @@
+.navbar{
+  /* this needs to be 100% because the element only takes what it needs and not the whole 100% that the parent gives it */
+  width: 100%;
+  /* background: #5A5A5A; */
+  border-radius: 2rem;
+}
