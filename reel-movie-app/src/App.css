@@ -3,4 +3,11 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-image: url('../public/movieBackground.png');
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 100vh;
+}
+body{
+
 }
