@@ -1,3 +1,6 @@
+.mediaScrollerContainer{
+  padding: 2rem;
+}
 .mediaScroller{
   display: grid;
   grid-auto-flow: column;
@@ -12,4 +15,18 @@
 
 .sideScrollerImages{
   height: 10rem;
+}
+
+h2{
+  background-color: gray;
+  display: inline-block;
+  padding: 6px 20px;
+  margin-left: 0;
+  font-size: 1.3em;
+  /* align-items:; */
+  color: white;
+  margin-bottom: 20px;
+}
+.icon{
+  height: 2.8em;
 }
