@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import useFetch from './tools/useFetch'
 import NavigationBar from './components/NavigationBar'
 import HomeCarousel from './components/HomeCarousel'
+import TopRatedScroller from './components/TopRatedScroller';
 
 function App() {
-  const { data, error } = useFetch()
+  const { data } = useFetch()
 
   return (
     <>
@@ -14,7 +15,9 @@ function App() {
       <NavigationBar/>
 
       {/* here I will make a carousel for the first 5 movies using bootstrap */}
-      <HomeCarousel data={data}/>
+      <HomeCarousel data={data} />
+      <TopRatedScroller data={data} />
+
 
     </>
   )

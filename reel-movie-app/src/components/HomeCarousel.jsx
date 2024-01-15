@@ -1,11 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './HomeCarousel.css'
+import getImageUrl from '../tools/getImageUrl';
 export default function HomeCarousel({ data }){
 
-  const getImageUrl = (posterPath) => {
-    const baseImageUrl = 'https://image.tmdb.org/t/p/w500';
-    return baseImageUrl + posterPath;
-  };
 
   return(
     <div className="carouselContainer">
@@ -21,7 +18,7 @@ export default function HomeCarousel({ data }){
                 src={getImageUrl(movie.poster_path)}
                  />
               <Carousel.Caption>
-                <h2>{movie.original_title}</h2>z
+                <h2>{movie.original_title}</h2>
               </Carousel.Caption>
             </Carousel.Item>
           )

@@ -1,0 +1,15 @@
+.mediaScroller{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  grid-auto-columns: 10%;
+
+  overflow-x: auto;
+  
+  overscroll-behavior-inline: contain; /*this is here so that when scrolling it does not pull the page when it's at the end of the line */
+
+}
+
+.sideScrollerImages{
+  height: 10rem;
+}
