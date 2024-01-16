@@ -10,16 +10,19 @@ function App() {
   const { data } = useFetch()
 
   return (
-    <>
+    <div className='app'>
 
       <NavigationBar/>
 
       {/* here I will make a carousel for the first 5 movies using bootstrap */}
       <HomeCarousel data={data} />
       <TopRatedScroller data={data} />
+      <TopRatedScroller data={data} />
+      <TopRatedScroller data={data} />
 
 
-    </>
+
+    </div>
   )
 }
 

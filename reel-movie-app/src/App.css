@@ -1,10 +1,17 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  /* text-align: center; */
+  background-color: black;
+
+  /* to center the app */
+  display: flex;
+  justify-content: center;
+}
+
+.app{
+  max-width: 1280px;
   background-image: url('./assets/movieBackground.png');
   background-repeat: no-repeat;
   background-size:cover;
-  height: 100vh;
+
 }

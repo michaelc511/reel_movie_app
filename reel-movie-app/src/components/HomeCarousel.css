@@ -11,9 +11,7 @@
 }
 
 .carouselContainer{ 
-  width: 20rem;
-  min-height: 30rem; 
-  /* overflow: hidden;  */
+  width: 15em;
   margin-bottom: 1.68em;
 }
 .carouselImg{
