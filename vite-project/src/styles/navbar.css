@@ -1,0 +1,16 @@
+.top-main-navbar {
+    background-color: #2F455C;
+    color: #1DCDFE;
+    padding: 50px;
+    margin: 0px;
+}
+
+.custom-container {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+.navbar-background {
+    background-color: #2F455C;
+    color: #2F455C;
+}
