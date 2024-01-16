@@ -17,9 +17,9 @@ export default function HomeCarousel({ data }){
                 // text={movie.id}
                 src={getImageUrl(movie.poster_path)}
                  />
-              <Carousel.Caption>
-                {/* <h2>{movie.original_title}</h2> */}
-              </Carousel.Caption>
+              {/* <Carousel.Caption>
+                <h2>{movie.original_title}</h2>
+              </Carousel.Caption> */}
             </Carousel.Item>
           )
 

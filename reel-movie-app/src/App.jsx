@@ -11,9 +11,11 @@ function App() {
 
   return (
     <div className='app'>
+      
+      <section>
+        <NavigationBar/>
 
-      <NavigationBar/>
-
+      </section>
       {/* here I will make a carousel for the first 5 movies using bootstrap */}
       <HomeCarousel data={data} />
       <TopRatedScroller data={data} />
