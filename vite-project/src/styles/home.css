@@ -1,7 +1,23 @@
 .home-content {
     background-color: #21D0B2;
     color: white;
-    padding: 50px;
-    margin: 0px;
+    margin: 0;
     text-align: center;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+}
+
+h1 {
+    padding-bottom: 2rem;
+    text-decoration: underline;
+    text-underline-offset:  1rem;
+}
+
+.copyright {
+    padding-top: 10rem;
+    padding-bottom: .25rem;
+    font-size: small;
 }

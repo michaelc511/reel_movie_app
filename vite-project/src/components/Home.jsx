@@ -1,11 +1,15 @@
 import React from 'react';
 import "../styles/home.css";
+import MovieCard from './MovieCard';
 
 const Home = () => {
   return (
-    <div className='home-content'>
-        This is where the movie cards will go.
-    </div>
+    <>
+      <div className='home-content'>
+        <h1>Discover</h1>
+        <MovieCard />
+      </div>
+    </>
   )
 }
 

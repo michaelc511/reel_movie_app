@@ -10,12 +10,12 @@ import Button from 'react-bootstrap/Button';
 const NavBar = () => {
   return (
     <Container className='custom-container' fluid>
-      <Navbar collapseOnSelect expand='lg' bg='navbar-background' data-bs-theme='dark' className='navbar-background' sticky='top'>
+      <Navbar collapseOnSelect expand='xl' bg='navbar-background' data-bs-theme='dark' className='navbar-background' sticky='top'>
         <Container className='mx-auto'>
           <Navbar.Brand href='#home' className="text-center">
             <img
               src={smlogo}
-              width='50%'
+              width='70%'
               className='d-inline-block align-top'
               alt='React Bootstrap logo'
             />
@@ -23,7 +23,6 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls='responsive-navbar-nav' className='ms-auto' />
           <Navbar.Collapse id='responsive-navbar-nav' className='text-center justify-content-center'>
             <Nav className='me-auto text-center'>
-              <Nav.Link href='#home'>Home</Nav.Link>
               <Nav.Link href='#discover'>Discover</Nav.Link>
               <Nav.Link href='#toprated'>Top Rated</Nav.Link>
               <Nav.Link href='#upcoming'>Upcoming</Nav.Link>
