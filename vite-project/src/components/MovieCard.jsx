@@ -2,67 +2,59 @@ import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import '../styles/home.css';
 
-const MovieCard = () => {
+const MovieCard = ({ movies }) => {
+  const truncateOverview = (text, maxLength) => {
+    if (text.length > maxLength) {
+      return text.substr(0, maxLength) + '...';
+    }
+    return text;
+  };
+
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
+
   return (
     <>
-    <div className='mx-auto'>
+      <div className='mx-auto'>
         <Container fluid>
-          <Row>
-            <Col className='align-items-center justify-content-center'>
-              <Card style={{ width: '100%' }}>
-                <Card.Img variant="top" src="holder.js/100px180" style= {{ alignContent: 'center' }}/>
-                <Card.Body>
-                  <Card.Title>Movie Title</Card.Title>
-                  <Card.Text>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aliquid quae quam tempore iste odio molestiae doloribus voluptas mollitia, sed, molestias nulla aperiam voluptate accusamus nesciunt recusandae repellat rem in.
+          <Row xs={1} sm={2} md={3} lg={4}>
+            {movies.map((movie) => (
+              <Col key={movie.id} className='align-items-center justify-content-center mb-3'>
+                <Card style={{ width: '100%', border: '0' }}>
+                  <Card.Img 
+                    variant="top" 
+                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
+                    style={{ alignContent: 'center' }} 
+                  />
+                  <Card.Body style={{ height: '100%', textAlign: 'center' }}>
+                    <Card.Title>
+                      <h2 style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2F455C' }}>
+                        {movie.title}
+                      </h2>
+                    </Card.Title>
+                    <Card.Text style={{ fontSize: '.85rem' }}>
+                      {truncateOverview(movie.overview, 150)}
                       <br /><br />
-                      Star Rating:
+                      <b>Release Date:</b> {formatDate(movie.release_date)}
                       <br /><br />
-                  </Card.Text>
-                  <Button variant="secondary">Details</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col className='align-items-center justify-content-center'>
-              <Card style={{ width: '100%' }}>
-                <Card.Img variant="top" src="holder.js/100px180" style= {{ alignContent: 'center' }}/>
-                <Card.Body>
-                  <Card.Title>Movie Title</Card.Title>
-                  <Card.Text>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aliquid quae quam tempore iste odio molestiae doloribus voluptas mollitia, sed, molestias nulla aperiam voluptate accusamus nesciunt recusandae repellat rem in.
-                      <br /><br />
-                      Star Rating:
-                      <br /><br />
-                  </Card.Text>
-                  <Button variant="secondary">Details</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col className='align-items-center justify-content-center'>
-              <Card style={{ width: '100%' }}>
-                <Card.Img variant="top" src="holder.js/100px180" style= {{ alignContent: 'center' }}/>
-                <Card.Body>
-                  <Card.Title>Movie Title</Card.Title>
-                  <Card.Text>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aliquid quae quam tempore iste odio molestiae doloribus voluptas mollitia, sed, molestias nulla aperiam voluptate accusamus nesciunt recusandae repellat rem in.
-                      <br /><br />
-                      Star Rating:
-                      <br /><br />
-                  </Card.Text>
-                  <Button variant="secondary">Details</Button>
-                </Card.Body>
-              </Card>
-            </Col>
+                      <b>Star Rating:</b> {movie.vote_average}
+                      <br />
+                    </Card.Text>
+                    <Button variant="secondary">Details</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
         </Container>
-    </div>
-    <div className="copyright">
-    © 2024 Cinesnap Movie Review App by shannaCodes.
-    </div>
+      </div>
+      <div className="copyright">
+        © 2024 Cinesnap Movie Review App by shannaCodes.
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default MovieCard;

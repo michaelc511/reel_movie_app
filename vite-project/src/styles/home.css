@@ -7,7 +7,7 @@
     padding-top: 3rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
 h1 {
@@ -20,4 +20,8 @@ h1 {
     padding-top: 10rem;
     padding-bottom: .25rem;
     font-size: small;
+}
+
+.movie-card-row {
+    margin-bottom: 2rem;
 }

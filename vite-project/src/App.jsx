@@ -1,13 +1,13 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import Home from './components/Home';
+import Discover from './components/Discover';
 
 function App() {
 
   return (
     <>
       <NavBar />
-      <Home />
+      <Discover />
     </>
   )
 }
