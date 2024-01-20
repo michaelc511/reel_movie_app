@@ -12,12 +12,12 @@ function App() {
   return (
     <div className='app'>
       
-      <section>
         <NavigationBar/>
 
-      </section>
       {/* here I will make a carousel for the first 5 movies using bootstrap */}
+      <section  >
       <HomeCarousel data={data} />
+      </section>
       <TopRatedScroller data={data} />
       <TopRatedScroller data={data} />
       <TopRatedScroller data={data} />
