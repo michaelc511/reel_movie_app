@@ -22,7 +22,7 @@ const MovieCard = ({ movies }) => {
           <Row xs={1} sm={2} md={3} lg={4}>
             {movies.map((movie) => (
               <Col key={movie.id} className='align-items-center justify-content-center mb-3'>
-                <Card style={{ width: '100%', border: '0' }}>
+                <Card style={{ width: '100%', border: '0', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)' }}>
                   <Card.Img 
                     variant="top" 
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 

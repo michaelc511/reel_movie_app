@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import "../styles/home.css";
 import MovieCard from './MovieCard';
+import { useSpring, animated } from 'react-spring';
 
 const Discover = () => {
   const [movies, setMovies] = useState([]);
+
+  const discoverAnimation = useSpring({
+    from: { transform: 'translateY(20px)', opacity: 0 },
+    to: { transform: 'translateY(0)', opacity: 1 },
+    config: { tension: 120, friction: 10 },
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,10 +35,12 @@ const Discover = () => {
 
   return (
     <>
-      <div className='home-content'>
-        <h1 style={{ fontSize: '2rem', color: '#2F455C' }}>Discover</h1>
-        <MovieCard movies={movies} /> 
-      </div>
+      <animated.div style={discoverAnimation}>
+        <div className='home-content'>
+          <h1 style={{ fontSize: '2rem', color: '#2F455C' }}>Discover</h1>
+          <MovieCard movies={movies} /> 
+        </div>
+      </animated.div>
     </>
   );
 };
