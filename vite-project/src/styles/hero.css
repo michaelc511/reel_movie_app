@@ -1,7 +1,7 @@
 .hero-content {
     position: relative;
     background-color: #1DCDFE;
-    background: linear-gradient(rgba(3, 39, 48, 0.6), rgba(7, 25, 30, 0.8)), url('/public/movies-background.png');
+    background: linear-gradient(rgba(3, 39, 48, 0.6), rgba(7, 25, 30, 0.8)), url('../assets/movies-background.png');
     background-position: left;
     background-position:left;
     background-repeat: no-repeat;

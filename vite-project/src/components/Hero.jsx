@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/hero.css';
-import translogo from '../../public/cinesnap-logo-transparent.png';
+import translogo from '../assets/cinesnap-logo-transparent.png';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useSpring, animated } from 'react-spring';
 
