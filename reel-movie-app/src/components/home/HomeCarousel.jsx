@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './HomeCarousel.css'
-import getImageUrl from '../tools/getImageUrl';
+import getImageUrl from '../../tools/getImageUrl';
 export default function HomeCarousel({ data }){
 
 

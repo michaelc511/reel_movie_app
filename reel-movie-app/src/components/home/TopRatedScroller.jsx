@@ -1,6 +1,6 @@
 
 import './TopRatedScroller.css'
-import getImageUrl from '../tools/getImageUrl'
+import getImageUrl from '../../tools/getImageUrl'
 export default function TopRatedScroller({ data }){
 
   return(

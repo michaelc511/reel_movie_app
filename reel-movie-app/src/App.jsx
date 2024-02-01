@@ -1,10 +1,9 @@
-import { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import useFetch from './tools/useFetch'
-import NavigationBar from './components/NavigationBar'
-import HomeCarousel from './components/HomeCarousel'
-import TopRatedScroller from './components/TopRatedScroller';
+import NavigationBar from './components/home/NavigationBar'
+import Home from './components/home/home';
+
 
 function App() {
   const { data } = useFetch()
@@ -12,16 +11,9 @@ function App() {
   return (
     <div className='app'>
       
-        <NavigationBar/>
+      <NavigationBar/>
 
-      {/* here I will make a carousel for the first 5 movies using bootstrap */}
-      <section  >
-      <HomeCarousel data={data} />
-      </section>
-      <TopRatedScroller data={data} />
-      <TopRatedScroller data={data} />
-      <TopRatedScroller data={data} />
-
+      <Home data={data} />
 
 
     </div>
