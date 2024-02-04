@@ -10,10 +10,10 @@ export default function NavigationBar(){
     <Navbar sticky="top" expand="lg">
       <Container>
         <Nav className="navbar justify-content-center bg-body-tertiary">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#discover">Discover</Nav.Link>
-          <Nav.Link href="#topRated">TopRated</Nav.Link>
-          <Nav.Link href="#upComing">Upcoming </Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/discover">Discover</Nav.Link>
+          <Nav.Link href="/topRated">TopRated</Nav.Link>
+          <Nav.Link href="/upComing">Upcoming </Nav.Link>
         </Nav>
       </Container>
     </Navbar>
