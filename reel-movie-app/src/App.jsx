@@ -13,9 +13,10 @@ function App() {
   return (
     <div className='app'>
       
+      <BrowserRouter>      
+      
       <NavigationBar/>
 
-      <BrowserRouter>      
         <Routes>
           <Route path='/' element={<Home data={data} /> } />
           <Route path='/discover' element={<Discover data={data} /> } />
