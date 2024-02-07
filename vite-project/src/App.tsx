@@ -4,17 +4,22 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+interface Movie {
+  id:number,
+  title:string 
+  poster_path:string
+}
 // Movies card component
-function MovieCard(){
+function MovieCard(movie:Movie){
   const [display, setDisplay] = useState('')
+  console.log('inside MovieCard >>>', movie.movie.poster_path)
   return(
     <div className="card">
-      <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <p>
-          Movie description goes here
-        </p>
+
+        <img src={`https://image.tmdb.org/t/p/w500${movie.movie.poster_path}`} className="logo" alt="Vite logo" />
+        
+        <div>{movie.movie.title}</div>
+        
         <button onClick={() => setDisplay((display) => display === '' ? 'Clicked view details button' : '')}>
           Details & Review
         </button>
@@ -26,8 +31,9 @@ function MovieCard(){
 
 function App() {
   const [count, setCount] = useState(0)
-  
-  const [movies, setMovies] = useState(null)
+  const [movies, setMovies] = useState([])
+
+
 
   // Movies API
   const url =
@@ -46,14 +52,16 @@ function App() {
     fetch(url,options)
     .then((resp)=> {return resp.json()})
     .then((data)=> {
-      console.log('movies >>>', data)
-      return setMovies(data)
+      //console.log('movies >>>', data['results'])
+      return setMovies(data['results'])
     })
+    
   });
 
   
-
+  //console.log('movies 2 >>>', movies)
   return (
+    
     <>
       <div>
         
@@ -61,9 +69,18 @@ function App() {
       </div>
       <h1>Vite + React</h1>
 
-      {/* Movies Card Component */}
-      <MovieCard></MovieCard>
-
+      <div className="cards-container">
+        {movies ? (
+      
+      movies.map((movie: Movie) => {
+      // return <div>{movie.title}</div>
+      //  return <MovieCard id={movie.id} title={movie.title}></MovieCard>
+      return <MovieCard key={movie.id} movie={movie}></MovieCard>
+    })
+        ): <div>loading</div>}
+      
+      </div>
+      
       <div className="card">
       <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
