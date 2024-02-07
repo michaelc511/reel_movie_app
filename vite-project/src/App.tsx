@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useEffect } from 'react';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -6,6 +7,29 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [display, setDisplay] = useState('')
+  const [movies, setMovies] = useState(null)
+
+  // Movies API
+  const url =
+    "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_original_language=en";
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjODAwODQ0Y2E3NTAwNTVjNzIwZjdlNDk3MjUzNWYwYiIsInN1YiI6IjY0NjYzZDBkMDA2YjAxMDEwNTg4ZmJiMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.hBRpnvHiUVIBXbwhW9islWlaKvT-EaccFSPfZtwrvRE",
+    },
+  };
+
+  useEffect(() => {
+    // Get movies
+    fetch(url,options)
+    .then((resp)=> {return resp.json()})
+    .then((data)=> {
+      console.log('movies >>>', data)
+      return setMovies(data)
+    })
+  });
 
   return (
     <>
