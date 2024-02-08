@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import { useEffect } from 'react';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 interface Movie {
@@ -9,18 +7,19 @@ interface Movie {
   title:string 
   poster_path:string
 }
+
 // Movies card component
 function MovieCard(movie:Movie){
   const [display, setDisplay] = useState('')
-  console.log('inside MovieCard >>>', movie.movie.poster_path)
+
   return(
     <div className="card">
 
-        <img src={`https://image.tmdb.org/t/p/w500${movie.movie.poster_path}`} className="logo" alt="Vite logo" />
+        <img src={`https://image.tmdb.org/t/p/w500${movie.movie.poster_path}`} className="image"  />
         
-        <div>{movie.movie.title}</div>
-        
-        <button onClick={() => setDisplay((display) => display === '' ? 'Clicked view details button' : '')}>
+        <h2>{movie.movie.title}</h2>
+
+        <button className="button" onClick={() => setDisplay((display) => display === '' ? 'Clicked view details button' : '')}>
           Details & Review
         </button>
         <div>{display}</div>
@@ -30,10 +29,7 @@ function MovieCard(movie:Movie){
 
 
 function App() {
-  const [count, setCount] = useState(0)
   const [movies, setMovies] = useState([])
-
-
 
   // Movies API
   const url =
@@ -52,53 +48,21 @@ function App() {
     fetch(url,options)
     .then((resp)=> {return resp.json()})
     .then((data)=> {
-      //console.log('movies >>>', data['results'])
       return setMovies(data['results'])
     })
     
   });
 
-  
-  //console.log('movies 2 >>>', movies)
-  return (
-    
+  return ( 
     <>
-      <div>
-        
-        
-      </div>
-      <h1>Vite + React</h1>
-
+      <h1>Home Page</h1>
       <div className="cards-container">
-        {movies ? (
-      
-      movies.map((movie: Movie) => {
-      // return <div>{movie.title}</div>
-      //  return <MovieCard id={movie.id} title={movie.title}></MovieCard>
-      return <MovieCard key={movie.id} movie={movie}></MovieCard>
-    })
-        ): <div>loading</div>}
-      
+      {movies ? ( 
+        movies.map((movie: Movie) => <MovieCard key={movie.id} movie={movie}></MovieCard>)
+        ): <div>loading</div>
+      }
+  
       </div>
-      
-      <div className="card">
-      <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-        
-        <p>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <div>
-        Edit <code>src/App.tsx</code> and save to test HMR
-        </div>
-          
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

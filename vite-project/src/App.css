@@ -3,6 +3,30 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: palevioletred;
+}
+
+.image {
+  height: 15em;
+}
+
+.card {
+  width: 15em;
+  padding: 1em;
+  background-color: whitesmoke;
+  border-style:groove; 
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+
+.button {
+  color: blue;
+  background-color: lavender;
+  align-self: flex-end;
 }
 
 .logo {
@@ -31,11 +55,6 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-  border-style: solid;
 }
 
 .read-the-docs {
