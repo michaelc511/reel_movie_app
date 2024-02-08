@@ -10,8 +10,12 @@
 
 .app{
   max-width: 1280px;
-  background-image: url('./assets/movieBackground.png');
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size:cover;  
+}
+
+.background-image{
+  opacity: 0.2;
+  position: absolute;
 
 }

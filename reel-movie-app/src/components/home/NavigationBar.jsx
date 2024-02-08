@@ -2,18 +2,19 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import "./NavigationBars.css"
+import "./NavigationBars.css";
+import { Link } from 'react-router-dom';
 
 export default function NavigationBar(){
 
   return(
     <Navbar sticky="top" expand="lg">
       <Container>
-        <Nav className="navbar justify-content-center bg-body-tertiary">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/discover">Discover</Nav.Link>
-          <Nav.Link href="/topRated">TopRated</Nav.Link>
-          <Nav.Link href="/upComing">Upcoming </Nav.Link>
+        <Nav className="navbar justify-content-space-evenly bg-body-tertiary">
+          <Link to="/">Home</Link>
+          <Link to="/discover">Discover</Link>
+          <Link to="/topRated">TopRated</Link>
+          <Link to="/upComing">Upcoming </Link>
         </Nav>
       </Container>
     </Navbar>
