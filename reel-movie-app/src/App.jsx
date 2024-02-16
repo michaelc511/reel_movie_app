@@ -12,11 +12,10 @@ function App() {
   const { data } = useFetch()
 
   return (
-    <div className='app'>
-      
+    <div className='appContainer'>
+      <div className="app">
         <BrowserRouter>      
         
-      <img src={movieBackground} className="background-image" />
           <NavigationBar/>
 
           <Routes>
@@ -26,7 +25,7 @@ function App() {
             {/* <Route path='/topRated' element={<TopRated data={data} /> } /> */}
           </Routes>
         </BrowserRouter>
-
+      </div>
     </div>
   )
 }
