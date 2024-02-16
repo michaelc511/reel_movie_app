@@ -5,7 +5,6 @@ import useFetch from './tools/useFetch'
 import NavigationBar from './components/home/NavigationBar'
 import Home from './components/home/home';
 import Discover from './components/discovery/Discover';
-import movieBackground from './assets/movieBackground.png'
 
 
 function App() {

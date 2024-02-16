@@ -9,8 +9,8 @@ export default function NavigationBar(){
 
   return(
     <Navbar sticky="top" expand="lg">
-      <Container>
-        <Nav className="navbar justify-content-space-evenly bg-body-tertiary">
+      <Container className=''>
+        <Nav className="navbar justify-content-space-around bg-body-tertiary">
           <Link to="/">Home</Link>
           <Link to="/discover">Discover</Link>
           <Link to="/topRated">TopRated</Link>
