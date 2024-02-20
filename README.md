@@ -1,9 +1,9 @@
 # reel_movie_app
 
-0. Prereq: NPM/Node. \n
-Windows: https://chorezap.blogspot.com/2023/03/1-windows-setup-vscode-terminal-git.html \n
+0. Prereq: NPM/Node. 
+* Windows: https://chorezap.blogspot.com/2023/03/1-windows-setup-vscode-terminal-git.html  
 
-Mac: https://chorezap.blogspot.com/2023/03/mac-tools-setup-vscode-terminal-github.html 
+* Mac: https://chorezap.blogspot.com/2023/03/mac-tools-setup-vscode-terminal-github.html 
 
 1. Clone the repo by running this command in the terminal 'git clone https://github.com/michaelc511/reel_movie_app.git'
 
