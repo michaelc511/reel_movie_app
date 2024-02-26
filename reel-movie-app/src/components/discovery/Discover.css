@@ -1,3 +1,19 @@
 h2{
-    width: auto;
+    width: 20.5rem;
+    text-align: center;
+}
+
+.movie-card{
+    width: "200px";
+    height: "450px";
+    border: 'solid black 1px';
+}
+
+.movie-image-card{
+    height: 12rem;
+  
+}
+
+button{
+    
 }

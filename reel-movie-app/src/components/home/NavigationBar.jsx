@@ -11,10 +11,10 @@ export default function NavigationBar(){
     <Navbar sticky="top" expand="lg">
       <Container className=''>
         <Nav className="navbar justify-content-space-around bg-body-tertiary">
-          <Link to="/">Home</Link>
-          <Link to="/discover">Discover</Link>
-          <Link to="/topRated">TopRated</Link>
-          <Link to="/upComing">Upcoming </Link>
+          <Link className='nav-item' to="/">Home</Link>
+          <Link className='nav-item' to="/discover">Discover</Link>
+          <Link className='nav-item' to="/topRated">TopRated</Link>
+          <Link className='nav-item' to="/upComing">Upcoming </Link>
         </Nav>
       </Container>
     </Navbar>

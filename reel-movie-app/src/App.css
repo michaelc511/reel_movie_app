@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 2rem;
   background-color: black;
+  height: 100vh;
 
   /* to center the app */
   display: flex;
@@ -13,6 +14,7 @@
   background-image: url('./assets/movieBackground.png');
   background-repeat: no-repeat;
   background-size:cover;
+  /* background-attachment: fixed; */
 
 }
 
