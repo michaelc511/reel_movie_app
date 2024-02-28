@@ -9,14 +9,12 @@ export default function NavigationBar(){
 
   return(
     <Navbar sticky="top" expand="lg">
-      <Container className=''>
-        <Nav className="navbar justify-content-space-around bg-body-tertiary">
+        <Nav className="navbar-container">
           <Link className='nav-item' to="/">Home</Link>
           <Link className='nav-item' to="/discover">Discover</Link>
           <Link className='nav-item' to="/topRated">TopRated</Link>
           <Link className='nav-item' to="/upComing">Upcoming </Link>
         </Nav>
-      </Container>
     </Navbar>
   )
 }

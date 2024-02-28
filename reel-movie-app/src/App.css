@@ -1,8 +1,8 @@
 #root {
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
   background-color: black;
-  height: 100vh;
+  height: 100%;
 
   /* to center the app */
   display: flex;
