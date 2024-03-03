@@ -22,12 +22,16 @@ h2{
   background-color: gray;
   border-radius: 1.68em;
   display: inline-block;
-  padding: 6px 10px 6px 25px;
+  padding: 5px 0 0 20px;
   font-size: 1.3em;
   /* align-items:; */
   color: white;
   margin-bottom: 20px;
+  width: 15.5rem;
+  text-align: center;
 }
+
+
 .icon{
   height: 2em;
   padding: 0;
